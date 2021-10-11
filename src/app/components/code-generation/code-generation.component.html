@@ -1,0 +1,10 @@
+
+<form class="add-form" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+        <label for="textPrompt">Please write your description</label><br>
+        <textarea [(ngModel)]="textPrompt" name="textPrompt" id="textPrompt" cols="100" rows="5"></textarea>
+    </div>
+    <input class="btn btn-block" type="submit" value="Generate Code">
+</form>
+
+<p style="margin-bottom: 2rem;white-space:pre-wrap;">{{codeResult.string}}</p>
