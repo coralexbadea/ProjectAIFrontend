@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CodeGenerationComponent } from './components/code-generation/code-generation.component';
+import { FireForestComponent } from './components/fire-forest/fire-forest.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CodeGenerationComponent } from './components/code-generation/code-gener
     HomeComponent,
     NavbarComponent,
     CodeGenerationComponent,
+    FireForestComponent,
 
   ],
   imports: [
