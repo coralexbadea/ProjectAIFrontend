@@ -1,1 +1,48 @@
-<p>fire-forest works!</p>
+<mat-form-field>
+    <div>
+      <mat-toolbar>
+        <!-- Display files names -->
+        <input matInput [(ngModel)]="fileAttr" readonly name="name" />
+  
+        <!-- Browse Button -->
+        <button mat-flat-button color="primary">
+            Browse File
+        </button>
+
+
+      </mat-toolbar>
+
+  
+      <!-- Fetch selected filed on change -->
+      <input type="file" #fileInput id="uploadFile" (change)="uploadFileEvt($event)" name="uploadFile" multiple="multiple"
+        accept="image/*" />
+    </div>
+  </mat-form-field>
+
+    <button  class="predButton" mat-flat-button color="primary" [disabled]="fileAttr==='Choose File'" (click)="makePrediction()">
+        Look for Fire
+    </button>
+    <br>
+    <p *ngIf="errorMessage.length">{{errorMessage}}</p>
+
+
+  <div class="row" >
+    <span #imgTarget></span>
+    <div *ngIf="lookinForFire===true">
+        <div class="result" [ngSwitch]="isFirePrediction">
+            <p class="warning">We classify your image as:</p>
+  
+            <div *ngSwitchCase="undefined" class="loader"><img class="img-logo" src="assets/images/loader.gif" alt=""></div>
+            <div *ngSwitchCase="'0'" class="tree-gif">
+              <img class="fire-gif" src="assets/images/fire1.gif" alt="">
+              <img src="assets/images/fire.png" alt="">
+              <p style="color:red">fire</p>
+            </div>
+            <div *ngSwitchCase="'1'"class="tree-gif">
+              <img src="assets/images/no-fire.png" alt="">
+              <p style="color: green;">no fire</p>
+            </div>
+        </div>
+    </div>
+
+  </div>

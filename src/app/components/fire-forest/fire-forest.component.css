@@ -1,0 +1,79 @@
+.mat-form-field {
+    margin: 40px 0;
+    width: 500px !important;
+}
+
+.mat-toolbar-single-row {
+    height: auto !important;
+    background: transparent;
+}
+
+.mat-toolbar-single-row button {
+    width: 200px;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+#uploadFile {
+    top: 0px;
+    left: 0px;
+    width: 100%;    
+    z-index: 9;
+    opacity: 0;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.result{
+    margin-left: 200px;
+    text-align: center;
+}
+
+.loader{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.loader .img-logo{
+    margin-left: -300px;
+    margin-top: -200px;
+}
+
+.predButton{
+    margin-left: 50px;
+    width: 200px;
+    height: 50px;
+    font-weight: bolder;
+}
+
+.warning{
+    color:orangered;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.tree-gif{
+    position:relative
+}
+
+.tree-gif img{
+    height:300px;
+}
+
+.tree-gif .fire-gif{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 100px;
+}
+
